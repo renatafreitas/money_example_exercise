@@ -1,0 +1,10 @@
+# frozen_string_literal: true
+require "spec_helper"
+
+RSpec.describe Dollar do
+
+  it 'executes multiplication' do
+    dollar = Dollar.new(5)
+    expect(dollar.multiply(2)).to eq(10)
+  end
+end
