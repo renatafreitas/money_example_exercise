@@ -2,12 +2,22 @@
 
 class Dollar
 
-  def initialize(conversion_rate)
-    @conversion_rate = conversion_rate
+  def initialize(amount, multiplier)
+    @amount = amount
+    @multiplier = multiplier
   end
 
-  def multiply(money_value)
-    @conversion_rate * money_value
+  def run
+    multiply
+  end
+
+
+  private
+
+  attr_reader :multiplier
+
+  def multiply
+    @amount *= multiplier
   end
 
 end
