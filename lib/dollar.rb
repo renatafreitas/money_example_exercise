@@ -8,15 +8,6 @@ class Dollar
     @amount = amount
   end
 
-  def run(multiplier)
-    times(multiplier)
-  end
-
-
-  private
-
-  attr_reader :multiplier
-
   def times(multiplier)
     @amount *= multiplier
   end
