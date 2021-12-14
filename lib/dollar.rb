@@ -8,6 +8,8 @@ class Dollar
     @amount = amount
   end
 
+  private
+
   def times(multiplier)
     new_amount = amount * multiplier
     self.class.new(new_amount)
