@@ -3,8 +3,11 @@ require "spec_helper"
 
 RSpec.describe Dollar do
 
-  it 'executes multiplication' do
+  it 'executes multiplication', :aggregate_failures do
     dollar = Dollar.new(5)
-    expect(dollar.times(2)).to eq(dollar.amount)
+    dollar.times(2)
+    expect(dollar.amount).to eq(10)
+    dollar.times(3)
+    expect(dollar.amount).to eq(15)
   end
 end

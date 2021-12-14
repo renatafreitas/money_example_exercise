@@ -2,14 +2,14 @@
 
 class Dollar
 
-  attr_reader :amount
+  attr_reader :amount, :initial_amount
 
-  def initialize(amount)
-    @amount = amount
+  def initialize(initial_amount)
+    @initial_amount = initial_amount
   end
 
   def times(multiplier)
-    @amount *= multiplier
+    @amount = initial_amount * multiplier
   end
 
 end
