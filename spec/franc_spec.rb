@@ -2,8 +2,8 @@
 require "spec_helper"
 
 RSpec.describe Franc do
-  let(:dollar) {Franc.new(5)}
-  let(:multiplied) { dollar.times(2) }
+  let(:franc) {Franc.new(5)}
+  let(:multiplied) { franc.times(2) }
 
   it 'executes multiplication' do
     expect(multiplied.amount).to eq(10)
@@ -11,11 +11,7 @@ RSpec.describe Franc do
 
   it 'doesn\'t change the original amount of Dollar', :aggregate_failures do
     expect(multiplied.amount).to eq(10)
-    expect(dollar.amount).to eq(5)
-  end
-
-  it 'asserts if Dollars are equal to Dollars' do
-    expect(Franc.new(10)).to eq(multiplied)
+    expect(franc.amount).to eq(5)
   end
 
 end

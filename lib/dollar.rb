@@ -1,8 +1,7 @@
 # frozen_string_literal: true
+require 'money'
 
-class Dollar
-
-  attr_reader :amount
+class Dollar < Money
 
   def initialize(amount)
     @amount = amount

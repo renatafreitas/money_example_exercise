@@ -14,8 +14,4 @@ RSpec.describe Dollar do
     expect(dollar.amount).to eq(5)
   end
 
-  it 'asserts if Dollars are equal to Dollars' do
-    expect(Dollar.new(10)).to eq(multiplied)
-  end
-
 end
