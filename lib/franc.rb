@@ -7,9 +7,4 @@ class Franc < Money
     @amount = amount
   end
 
-  def times(multiplier)
-    new_amount = amount * multiplier
-    self.class.new(new_amount)
-  end
-
 end

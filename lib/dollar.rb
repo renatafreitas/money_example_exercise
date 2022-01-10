@@ -7,11 +7,6 @@ class Dollar < Money
     @amount = amount
   end
 
-  def times(multiplier)
-    new_amount = amount * multiplier
-    self.class.new(new_amount)
-  end
-
   def == (other)
     amount == other.amount
   end
