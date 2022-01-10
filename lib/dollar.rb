@@ -3,12 +3,10 @@ require 'money'
 
 class Dollar < Money
 
+  CURRENCY = "USD"
+
   def initialize(amount)
     @amount = amount
-  end
-
-  def == (other)
-    amount == other.amount
   end
 
 end

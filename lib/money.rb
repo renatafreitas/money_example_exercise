@@ -12,4 +12,8 @@ class Money
     new_amount = amount * multiplier
     self.class.new(new_amount)
   end
+
+  def currency
+    self.class::CURRENCY
+  end
 end
